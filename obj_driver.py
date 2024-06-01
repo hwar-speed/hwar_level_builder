@@ -5,6 +5,7 @@ import shutil
 import wexpect
 
 from game_objects import GameObject
+from teams import Teams
 
 OB3_EDIT_PATH = pathlib.Path(r"C:\Users\verme\Desktop\temp\OB3Editor.exe")
 SOURCE_OB3 = r"C:\HWAR\modtest2\Level22\level22 original.ob3"
@@ -33,6 +34,12 @@ class OB3Driver:
         self._wait('What would you like to do?')
         self.child.sendline("8")
         
+    def remove_all_objects(self):
+        print("** REMOVING ALL OBJECTS **")  
+        self.child.sendline("10")
+        self._wait("Press any key to continue . . .")
+        self.child.sendline("")
+        
     def remove_object(self, id:int):  
         print(f"** REMOVING OBJECT '{id}' **")  
         self.child.sendline("6")
@@ -41,13 +48,21 @@ class OB3Driver:
         self._wait("Press any key to continue . . .")
         self.child.sendline("")
         
-    def add_object(self, new_obj_id_in_list:int, x:float, y:float, z:float, team:int=1) -> None:
+    def add_object(self, new_obj_id_in_list:int, x:float, y:float, z:float, team:int=Teams.ENEMY1.value, custom="") -> None:
+        # GTODO
+        y += 15 # global offset not sure where comes from?
+        
         print(f"** ADDING NEW OBJECT WITH TYPE '{new_obj_id_in_list}' **")  
         self.child.sendline("4")
         self._wait("Choose an object type, type -1 for custom type")
-        if isinstance(new_obj_id_in_list, GameObject):
-            new_obj_id_in_list = new_obj_id_in_list.value
-        self.child.sendline(str(new_obj_id_in_list))
+        if not custom:
+            if isinstance(new_obj_id_in_list, GameObject):
+                new_obj_id_in_list = new_obj_id_in_list.value
+            self.child.sendline(str(new_obj_id_in_list))
+        else:
+            self.child.sendline("-1")
+            self._wait_exact("ok smartypants, what is the object type name?")
+            self.child.sendline(custom)
         # skip weapons 
         self.child.sendline("-1")
         self._wait("x:")
@@ -80,15 +95,15 @@ class OB3Driver:
         self.child.sendline("")
         self._wait("13. Stop")
         self.child.sendline("13") # stop editing this one
-        self._wait("11. Quit")
+        self._wait("12. Quit")
 
          
     def close(self):
         self.child.sendline("7") # save ob3
         self._wait("Press any key to continue . . .")
         self.child.sendline("")
-        self._wait("11. Quit")
-        self.child.sendline("11") # close  
+        self._wait("12. Quit")
+        self.child.sendline("12") # close  
         
 
 def find_files_ending_with_ob3_in_dir(dir:pathlib.Path) -> list[str]:
@@ -104,19 +119,21 @@ if __name__ == "__main__":
         os.remove(f)
     init_ob3 = []
     try:
+        # launch
         ob3_driver = OB3Driver()
         ob3_driver.launch_ob3(SOURCE_OB3)
         
-        # do things 
-        while True:
-            ob3_driver.remove_object(1) # remove things
-            
-            
-        ob3_driver.remove_object(374) # remove the magpie
-        ob3_driver.remove_object(11) # remove the carrier
-        ob3_driver.add_object(GameObject.Carrier, 2343.28, 9, 250, team=0)
-        ob3_driver.add_object(GameObject.DedicatedLifter, 2343.28, 20, 250, team=0)
+        # remove EVERYTHING
+        ob3_driver.remove_all_objects()
         
+        # order from blender if X is forward, Y is up  is ... X, Z, Y
+        
+        # create a carrier and a dedicated lifter
+        ob3_driver.add_object(GameObject.Carrier, 1950, 0, 476.2, team=Teams.FRIENDLY.value)
+        # ob3_driver.add_object(GameObject.DedicatedLifter, 1972, 20, 441, team=Teams.FRIENDLY.value)
+        # ob3_driver.add_object(-1, 2354, -2, 464, custom="l2fueltank", team=Teams.RECYCLE.value)
+        # ob3_driver.add_object(-1, 2603, 9.5, 542, team=1, custom="l2fueltank")
+
         
         
         ob3_driver.close()
