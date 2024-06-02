@@ -1,209 +1,208 @@
-from enum import Enum
-
-class GameObject(Enum):
-    NoneType = 0
-    OakTree = 1
-    LeafyTree = 2
-    TallTree = 3
-    TallTree2 = 4
-    FlatBush = 5
-    ThinBush = 6
-    BigBush = 7
-    LittleRock = 8
-    MediumRock = 9
-    TallRock = 10
-    SuperTank = 11
-    Chopper = 12
-    SuperChopper = 13
-    Lifter = 14
-    DedicatedLifter = 15
-    Bomber = 16
-    Harvester = 17
-    HeavyTank = 18
-    HoverTank = 19
-    SuperHover = 20
-    StaticPlatform = 21
-    Carrier = 22
-    MutantCarrier = 23
-    CarrierRusty = 24
-    CarrierRustyLevel6 = 25
-    DeadCarrier = 26
-    DeadCarrier1 = 27
-    ReconBuggy = 28
-    AlienTower = 29
-    AlienWallSection = 30
-    SmallFlyer = 31
-    MediumFlyer = 32
-    HoverLaser = 33
-    BlastTower = 34
-    MachineGun = 35
-    HyMachineGun = 36
-    Howitzer = 37
-    HybridHowitzer = 38
-    Node = 39
-    FinalNode = 40
-    BubbleCopter = 41
-    Apache = 42
-    M1Tank = 43
-    MammothTank = 44
-    MobileHowitzer = 45
-    CabalBomber = 46
-    HybridChopper = 47
-    HybridApache = 48
-    M1Hybrid = 49
-    HybridMammothTank = 50
-    MobHybHow = 51
-    HybridVTOL = 52
-    CannonBunker = 53
-    HyBunker = 54
-    LightWalker = 55
-    TinyWalker = 56
-    HeavyWalker = 57
-    SiegeSlug = 58
-    Digger1 = 59
-    Logger1 = 60
-    Plough1 = 61
-    L3Truck = 62
-    TenTon = 63
-    AllTerrain = 64
-    Submarine = 65
-    Truck1 = 66
-    TruckTanker1 = 67
-    TruckContainer1 = 68
-    L15Boss = 69
-    CargoPlane = 70
-    BrainPod = 71
-    CultureClub = 72
-    ComDish = 73
-    ComDish2 = 74
-    WorkingGun = 75
-    HybridAAGun = 76
-    AlienAAGun = 77
-    RustyGun1 = 78
-    RustyGun2 = 79
-    RustyGun3 = 80
-    L2ChopperDown = 81
-    MissilePlatform = 82
-    HeavyTankRescue = 83
-    HoverTankRescue = 84
-    TrainEngine = 85
-    TrainCar = 86
-    TrainTanker = 87
-    MaglevTrain1 = 88
-    MLStraight = 89
-    MLShortStraight = 90
-    MLPoints1 = 91
-    MLPoints2 = 92
-    RailsPoints = 93
-    RailsPointsA = 94
-    RailsShort = 95
-    RailsNoSupport = 96
-    TrainEntrance01 = 97
-    RailCrossing = 98
-    RailsBuffers = 99
-    FlyProd = 100
-    HyFlyProd = 101
-    AlienProdTower = 102
-    GroundProd = 103
-    HybridGP = 104
-    AlienGroundProd = 105
-    LargeProd = 106
-    HyLargeProd = 107
-    AlienLargeProd = 108
-    Maggot = 109
-    Command = 110
-    HybridCommand = 111
-    AlienComCenter = 112
-    PowerStore = 113
-    HybridStore = 114
-    AlienPowerStore = 115
-    L4OilPump = 116
-    HyEnergyProd = 117
-    AlienPump = 118
-    Radar = 119
-    CriticalRadar = 120
-    SpyTower = 121
-    AlienSpyTower = 122
-    Transmitter = 123
-    CriticalTransmitter = 124
-    RechargeCrate = 125
-    Chinook = 126
-    Blobman = 127
-    L7Blobman = 128
-    Seagull = 129
-    FlockOfAliens = 130
-    MapRevealer1 = 131
-    MapRevealer2 = 132
-    MapRevealer3 = 133
-    ColdGenerator = 134
-    SCAVHarvester = 135
-    REPAIRHarvester = 136
-    SCAVSuperTank = 137
-    REPAIRSuperTank = 138
-    CommTower = 139
-    Mine = 140
-    Camera1 = 141
-    Camera2 = 142
-    Camera3 = 143
-    Camera4 = 144
-    Camera5 = 145
-    Camera6 = 146
-    Camera7 = 147
-    Camera8 = 148
-    Camera9 = 149
-    Camera10 = 150
-    Camera11 = 151
-    Camera12 = 152
-    CamTarget1 = 153
-    CamTarget2 = 154
-    CamTarget3 = 155
-    CamTarget4 = 156
-    CamTarget5 = 157
-    CamTarget6 = 158
-    CamTarget7 = 159
-    CamTarget8 = 160
-    CamTarget9 = 161
-    CamTarget10 = 162
-    CamTarget11 = 163
-    CamTarget12 = 164
-    RotCamera1 = 165
-    RotCamera2 = 166
-    RotCamera3 = 167
-    RotCamera4 = 168
-    RotCamera5 = 169
-    RotCamera6 = 170
-    RotCamera7 = 171
-    RotCamera8 = 172
-    Chatest = 173
-    ChatStatue = 174
-    ScavTank = 175
-    MissileSilo = 176
-    BlastDoors = 177
-    HybridDoor = 178
-    L10EnhBaseDoor = 179
-    L10DefDoor = 180
-    L10EnPowerPlant = 181
-    Clamp1 = 182
-    Clamp2 = 183
-    Clamp3 = 184
-    Clamp4 = 185
-    Welder1 = 186
-    Welder2 = 187
-    Welder3 = 188
-    Welder4 = 189
-    TenXCliff = 190
-    TenXCliff2 = 191
-    DiagonalCliff = 192
-    DiagonalCliff2 = 193
-    ShieldUnit = 194
-    LaserCrate = 195
-    SolidSimploids = 196
-    StripLight = 197
-    DisaGun = 198
-    AreaMarker = 199
-    WaypointMarker = 200
-    RallyPoint = 201
-    Center = 202
-    Sphere = 203
-    Vane = 204
-    BaseDoor = 205
+game_objects = {
+    "NoneType": 0,
+    "OakTree": 1,
+    "LeafyTree": 2,
+    "TallTree": 3,
+    "TallTree2": 4,
+    "FlatBush": 5,
+    "ThinBush": 6,
+    "BigBush": 7,
+    "LittleRock": 8,
+    "MediumRock": 9,
+    "TallRock": 10,
+    "SuperTank": 11,
+    "Chopper": 12,
+    "SuperChopper": 13,
+    "Lifter": 14,
+    "DedicatedLifter": 15,
+    "Bomber": 16,
+    "Harvester": 17,
+    "HeavyTank": 18,
+    "HoverTank": 19,
+    "SuperHover": 20,
+    "StaticPlatform": 21,
+    "Carrier": 22,
+    "MutantCarrier": 23,
+    "CarrierRusty": 24,
+    "CarrierRustyLevel6": 25,
+    "DeadCarrier": 26,
+    "DeadCarrier1": 27,
+    "ReconBuggy": 28,
+    "AlienTower": 29,
+    "AlienWallSection": 30,
+    "SmallFlyer": 31,
+    "MediumFlyer": 32,
+    "HoverLaser": 33,
+    "BlastTower": 34,
+    "MachineGun": 35,
+    "HyMachineGun": 36,
+    "Howitzer": 37,
+    "HybridHowitzer": 38,
+    "Node": 39,
+    "FinalNode": 40,
+    "BubbleCopter": 41,
+    "Apache": 42,
+    "M1Tank": 43,
+    "MammothTank": 44,
+    "MobileHowitzer": 45,
+    "CabalBomber": 46,
+    "HybridChopper": 47,
+    "HybridApache": 48,
+    "M1Hybrid": 49,
+    "HybridMammothTank": 50,
+    "MobHybHow": 51,
+    "HybridVTOL": 52,
+    "CannonBunker": 53,
+    "HyBunker": 54,
+    "LightWalker": 55,
+    "TinyWalker": 56,
+    "HeavyWalker": 57,
+    "SiegeSlug": 58,
+    "Digger1": 59,
+    "Logger1": 60,
+    "Plough1": 61,
+    "L3Truck": 62,
+    "TenTon": 63,
+    "AllTerrain": 64,
+    "Submarine": 65,
+    "Truck1": 66,
+    "TruckTanker1": 67,
+    "TruckContainer1": 68,
+    "L15Boss": 69,
+    "CargoPlane": 70,
+    "BrainPod": 71,
+    "CultureClub": 72,
+    "ComDish": 73,
+    "ComDish2": 74,
+    "WorkingGun": 75,
+    "HybridAAGun": 76,
+    "AlienAAGun": 77,
+    "RustyGun1": 78,
+    "RustyGun2": 79,
+    "RustyGun3": 80,
+    "L2ChopperDown": 81,
+    "MissilePlatform": 82,
+    "HeavyTankRescue": 83,
+    "HoverTankRescue": 84,
+    "TrainEngine": 85,
+    "TrainCar": 86,
+    "TrainTanker": 87,
+    "MaglevTrain1": 88,
+    "MLStraight": 89,
+    "MLShortStraight": 90,
+    "MLPoints1": 91,
+    "MLPoints2": 92,
+    "RailsPoints": 93,
+    "RailsPointsA": 94,
+    "RailsShort": 95,
+    "RailsNoSupport": 96,
+    "TrainEntrance01": 97,
+    "RailCrossing": 98,
+    "RailsBuffers": 99,
+    "FlyProd": 100,
+    "HyFlyProd": 101,
+    "AlienProdTower": 102,
+    "GroundProd": 103,
+    "HybridGP": 104,
+    "AlienGroundProd": 105,
+    "LargeProd": 106,
+    "HyLargeProd": 107,
+    "AlienLargeProd": 108,
+    "Maggot": 109,
+    "Command": 110,
+    "HybridCommand": 111,
+    "AlienComCenter": 112,
+    "PowerStore": 113,
+    "HybridStore": 114,
+    "AlienPowerStore": 115,
+    "L4OilPump": 116,
+    "HyEnergyProd": 117,
+    "AlienPump": 118,
+    "Radar": 119,
+    "CriticalRadar": 120,
+    "SpyTower": 121,
+    "AlienSpyTower": 122,
+    "Transmitter": 123,
+    "CriticalTransmitter": 124,
+    "RechargeCrate": 125,
+    "Chinook": 126,
+    "Blobman": 127,
+    "L7Blobman": 128,
+    "Seagull": 129,
+    "FlockOfAliens": 130,
+    "MapRevealer1": 131,
+    "MapRevealer2": 132,
+    "MapRevealer3": 133,
+    "ColdGenerator": 134,
+    "SCAVHarvester": 135,
+    "REPAIRHarvester": 136,
+    "SCAVSuperTank": 137,
+    "REPAIRSuperTank": 138,
+    "CommTower": 139,
+    "Mine": 140,
+    "Camera1": 141,
+    "Camera2": 142,
+    "Camera3": 143,
+    "Camera4": 144,
+    "Camera5": 145,
+    "Camera6": 146,
+    "Camera7": 147,
+    "Camera8": 148,
+    "Camera9": 149,
+    "Camera10": 150,
+    "Camera11": 151,
+    "Camera12": 152,
+    "CamTarget1": 153,
+    "CamTarget2": 154,
+    "CamTarget3": 155,
+    "CamTarget4": 156,
+    "CamTarget5": 157,
+    "CamTarget6": 158,
+    "CamTarget7": 159,
+    "CamTarget8": 160,
+    "CamTarget9": 161,
+    "CamTarget10": 162,
+    "CamTarget11": 163,
+    "CamTarget12": 164,
+    "RotCamera1": 165,
+    "RotCamera2": 166,
+    "RotCamera3": 167,
+    "RotCamera4": 168,
+    "RotCamera5": 169,
+    "RotCamera6": 170,
+    "RotCamera7": 171,
+    "RotCamera8": 172,
+    "Chatest": 173,
+    "ChatStatue": 174,
+    "ScavTank": 175,
+    "MissileSilo": 176,
+    "BlastDoors": 177,
+    "HybridDoor": 178,
+    "L10EnhBaseDoor": 179,
+    "L10DefDoor": 180,
+    "L10EnPowerPlant": 181,
+    "Clamp1": 182,
+    "Clamp2": 183,
+    "Clamp3": 184,
+    "Clamp4": 185,
+    "Welder1": 186,
+    "Welder2": 187,
+    "Welder3": 188,
+    "Welder4": 189,
+    "TenXCliff": 190,
+    "TenXCliff2": 191,
+    "DiagonalCliff": 192,
+    "DiagonalCliff2": 193,
+    "ShieldUnit": 194,
+    "LaserCrate": 195,
+    "SolidSimploids": 196,
+    "StripLight": 197,
+    "DisaGun": 198,
+    "AreaMarker": 199,
+    "WaypointMarker": 200,
+    "RallyPoint": 201,
+    "Center": 202,
+    "Sphere": 203,
+    "Vane": 204,
+    "BaseDoor": 205
+}

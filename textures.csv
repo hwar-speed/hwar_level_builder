@@ -1,0 +1,11 @@
+texture_path,texture_id,reference
+C:\HWAR\modtest2\Level51\textures\base.tga,0,"sandystone.pcx  0.500, 65,56,40, 64,80,48, 0.000, MUD"
+C:\HWAR\modtest2\Level51\textures\base_grass.tga,1,"grass.pcx  0.500, 98,99,56, 37,47,28, 0.000, GRASS"
+C:\HWAR\modtest2\Level51\textures\rock.tga,2,"sandgrav.pcx  0.500, 111,99,73, 255,0,0, 0.000, ROCK"
+C:\HWAR\modtest2\Level51\textures\sand.tga,3,"trsand2.pcx  0.500, 109,95,69, 0,0,0, 0.000, SAND"
+C:\HWAR\modtest2\Level51\textures\mountain.tga,4,"troprock1.pcx  0.500, 81,73,53, 0,0,0, 0.000, ROCK"
+C:\HWAR\modtest2\Level51\textures\snow.tga,5,"whitesnow.pcx  0.743, 255,249,250, 0,0,0, 0.000, SNOW"
+C:\HWAR\modtest2\Level51\textures\dock.tga,6,"paving.pcx  0.500, 90,93,79, 0,0,0, 0.000, CONCRETE"
+C:\HWAR\modtest2\Level51\textures\road.tga,7,"pave1.pcx  0.500, 64,69,57, 0,0,0, 0.000, CONCRETE"
+C:\HWAR\modtest2\Level51\textures\alien_base.tga,8,"ltwenalien1.pcx  0.500, 129,132,139, 0,0,0, 0.000, ALIENWET"
+C:\HWAR\modtest2\Level51\textures\alien_diseased.tga,9,"slushblood2.PCX  0.500, 119,108,102, 0,0,0, 0.000, ALIENBLOOD"
